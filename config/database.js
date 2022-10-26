@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/DraftAtlasPrototype", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
+mongoose.connect(
+	"mongodb+srv://jsckhan:database@project-2.cvzweup.mongodb.net/?retryWrites=true&w=majority",
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	}
+);
 
 const db = mongoose.connection;
 
