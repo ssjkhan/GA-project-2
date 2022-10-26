@@ -2,8 +2,10 @@ var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-	res.render("team", { title: "Draft Atlas" });
-});
+router.get("/", sayHello);
+
+function sayHello(req, res, next) {
+	res.send("hello this is index");
+}
 
 module.exports = router;
