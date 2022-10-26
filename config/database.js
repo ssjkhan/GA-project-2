@@ -1,12 +1,11 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
+const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(
-	"mongodb+srv://jsckhan:database@project-2.cvzweup.mongodb.net/?retryWrites=true&w=majority",
-	{
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	}
-);
+mongoose.connect(MONGODB_URI, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 
