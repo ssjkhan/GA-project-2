@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 
 // Init router
 const router = express.Router();
@@ -9,4 +9,5 @@ function sayHello(req, res, next) {
 	res.send("hello this is index");
 }
 
-module.exports = router;
+export default router;
+export { router };
