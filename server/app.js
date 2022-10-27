@@ -1,3 +1,4 @@
+// import lib
 import express from "express";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
@@ -6,8 +7,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
+// import middleware for mount
 import indexRouter from "./routes/index.js";
-import teamRouter from "./routes/team.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -45,3 +46,8 @@ app.use(function (err, req, res, next) {
 });
 
 export default app;
+
+//test
+import tests from "../test/tests.js";
+
+tests();

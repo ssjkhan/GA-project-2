@@ -1,7 +1,11 @@
+import mongoose from "mongoose";
+
 // const mongoose = require("mongoose");
 
-// const accountSchema = mongoose.Schema({
-// 	ign: String,
-// });
+const accountSchema = mongoose.Schema({
+	inGameName: String,
+	accountID: String,
+	PUUID: String,
+});
 
-// module.exports = mongoose.model(accountSchema, "gameAccount");
+export default mongoose.Model(accountSchema);
