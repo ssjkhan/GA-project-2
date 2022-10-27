@@ -1,12 +1,15 @@
-// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-// const playerSchema = mongoose.Schema({
-// 	name: String,
-// 	team: String,
-// 	summoners: {
-// 		type: mongoose.SchemaTypes.ObjectId,
-// 		ref: "gameAccount",
-// 	},
-// });
+const playerSchema = mongoose.Schema({
+	name: String,
+	team: String,
+	summoners: {
+		type: mongoose.SchemaTypes.ObjectId,
+		ref: "gameAccount",
+	},
+});
 
-// module.exports = mongoose.model(playerSchema, "player");
+const playerModel = mongoose.model.apply(playerSchema, "player");
+
+export default playerModel;
+export { playerModel };

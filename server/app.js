@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 
 import indexRouter from "./routes/index.js";
+import teamRouter from "./routes/team.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Mount Routes
+//app.use("/team", teamRouter);
 app.use("/", indexRouter);
 
 // catch 404 and forward to error handler

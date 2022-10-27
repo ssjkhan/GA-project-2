@@ -1,13 +1,15 @@
 import express from "express";
+import * as Controller from "../controllers/index.js";
+import testRouter from "../routes/test.js";
+import teamRouter from "../routes/team.js";
 
 // Init router
 const router = express.Router();
-/* GET home page. */
-router.get("/", sayHello);
 
-function sayHello(req, res, next) {
-	res.send("hello this is index");
-}
+// mount routes
+router.use("/test", Controller.test);
+router.use("/team", Controller.team);
 
-export default router;
-export { router };
+router.get("/", Controller.main);
+
+export { router as default };
