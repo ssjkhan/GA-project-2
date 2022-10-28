@@ -6,4 +6,4 @@ const accountSchema = mongoose.Schema({
 	PUUID: String,
 });
 
-export default mongoose.model("account", accountSchema);
+export default mongoose.model("gameAccount", accountSchema);

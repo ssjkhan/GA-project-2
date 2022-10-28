@@ -105,3 +105,6 @@ dist
 
 # Node
 node_modules
+
+# mongosh script
+*.sh

@@ -1,5 +1,5 @@
 import * as envConfig from "dotenv";
-import mongoose from "mongoose";
+import mongoose, { connect } from "mongoose";
 
 // init environment variables and load into memory
 envConfig.config();
@@ -8,10 +8,10 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // init mongoose connection
 async function connectDatabase() {
 	try {
-		var db = mongoose.connection;
-
-		db.on("connected", (err) => {
-			console.log(`connected to MongoDB at ${db.host}:${db.port}`);
+		mongoose.connection.on("connected", (err) => {
+			console.log(
+				`connected to MongoDB at ${mongoose.connection.host}:${mongoose.connection.port}\@${mongoose.connection.name}`
+			);
 		});
 
 		await mongoose.connect(MONGODB_URI, {
@@ -24,5 +24,4 @@ async function connectDatabase() {
 }
 
 await connectDatabase();
-
 export default mongoose.connection;
