@@ -2,7 +2,7 @@
 
 Project-2 for SEI-55-TOR
 
-[<img alt="Demo Opening Page" width="40px" src="imgs/screenshot-1.PNG" />]
+![Demo Opening Screenshot](/imgs/screenshot-1.png)
 
 # CURRENT STATUS
 
@@ -11,7 +11,7 @@ Project-2 for SEI-55-TOR
 - role assignment and interactive modern UI
 - Try it out for free, [here](https://draft-atlas-prototype.herokuapp.com/)!
 
-[<img alt="Demo Opening Page" width="40px" src="imgs/screenshot-2.PNG" />]
+![Demo User Page](/imgs/screenshot-2.png)
 
 # TECH
 
