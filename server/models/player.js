@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
 
 const playerSchema = mongoose.Schema({
-	name: String,
-	role: String,
+	playerName: String,
+	ROLE: String,
 	team: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "team",
+		default: null,
 	},
 });
 

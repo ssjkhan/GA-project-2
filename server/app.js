@@ -6,6 +6,7 @@ import createError from "http-errors";
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import database from "./config/database.js";
 
 // initialize global variables
 const __filename = fileURLToPath(import.meta.url);
@@ -46,3 +47,7 @@ app.use(function (err, req, res, next) {
 });
 
 export default app;
+
+// import Tests from "../test/databaseTests.js";
+
+// Tests();

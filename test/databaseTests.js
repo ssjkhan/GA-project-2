@@ -7,7 +7,7 @@ async function newPlayer() {
 	try {
 		console.log("Trying to create new player");
 
-		const newPlayer = await Player.create({ name: "Mango Revel" });
+		const newPlayer = await Player.create({ playerName: "Mango Revel" });
 
 		await newPlayer.save();
 
@@ -17,27 +17,9 @@ async function newPlayer() {
 	}
 }
 
-async function newAccount() {
-	try {
-		console.log("Trying to create a new accounter");
-
-		const newAccount = await Account.create({ inGameName: "Mango Revel" });
-
-		await newAccount.save();
-
-		console.log("Saved account");
-	} catch (error) {
-		console.log(error);
-	}
-}
-
 async function runTests() {
 	try {
 		await newPlayer();
-		await newAccount();
-
-		await newPlayer();
-		await newAccount();
 	} catch (error) {
 		console.log(error);
 	}
