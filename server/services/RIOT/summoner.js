@@ -1,4 +1,4 @@
-import apiKey from "./key.js";
+import apiKey from "../../config/riotKey.js";
 import axios from "axios";
 import { token } from "morgan";
 
@@ -17,7 +17,6 @@ async function getPUUID(name) {
 			},
 		});
 
-		// console.log(res.data);
 		return res.data;
 	} catch (error) {
 		console.log("RIOT API Error");

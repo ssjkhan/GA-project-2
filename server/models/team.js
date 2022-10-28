@@ -1,16 +1,16 @@
-// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-// const teamSchema = mongoose.Schema({
-// 	players: [
-// 		{
-// 			type: mongoose.Schema.Types.ObjectId,
-// 			ref: "player",
-// 		},
-// 	],
-// 	team: {
-// 		type: mongoose.Schema.Types.ObjectId,
-// 		ref: "team",
-// 	},
-// });
+const teamSchema = mongoose.Schema({
+	players: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "player",
+		},
+	],
+	team: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "team",
+	},
+});
 
-// module.exports = mongoose.model(teamSchema);
+export default mongoose.model("team", teamSchema);

@@ -9,7 +9,7 @@ const playerSchema = mongoose.Schema({
 	},
 });
 
-const playerModel = mongoose.model.apply(playerSchema, "player");
+const playerModel = mongoose.model(playerSchema, "player");
 
 export default playerModel;
 export { playerModel };

@@ -1,18 +1,28 @@
-// const mongoose = require("mongoose");
-// require("dotenv").config();
-// const MONGODB_URI = process.env.MONGODB_URI;
+import * as envConfig from "dotenv";
+import mongoose from "mongoose";
 
-// mongoose.connect(MONGODB_URI, {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// });
+// init environment variables and load into memory
+envConfig.config();
+const MONGODB_URI = process.env.MONGODB_URI;
 
-// const db = mongoose.connection;
+// init mongoose connection
+async function connectDatabase() {
+	try {
+		var db = mongoose.connection;
 
-// db.on("connected", (err) => {
-// 	console.log(`connected to MongoDB at ${db.host}:${db.port}`);
-// });
+		db.on("connected", (err) => {
+			console.log(`connected to MongoDB at ${db.host}:${db.port}`);
+		});
 
-// module.exports = {
-// 	db,
-// };
+		await mongoose.connect(MONGODB_URI, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		});
+	} catch (error) {
+		console.log(error);
+	}
+}
+
+await connectDatabase();
+
+export default mongoose.connection;

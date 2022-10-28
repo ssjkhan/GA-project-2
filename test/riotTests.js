@@ -16,3 +16,14 @@ async function runTests() {
 }
 
 export default runTests;
+
+// async function(){
+//     try {
+//         var result = await doSomething();
+
+//     } catch (error) {
+//         console.log(error);
+//     }
+
+//     return result;
+// }

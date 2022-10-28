@@ -7,9 +7,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
-// import middleware for mount
-import indexRouter from "./routes/index.js";
-
+// initialize global variables
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
@@ -25,8 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// import middleware for mount
+import indexRouter from "./routes/index.js";
+
 // Mount Routes
-//app.use("/team", teamRouter);
 app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
@@ -48,6 +48,7 @@ app.use(function (err, req, res, next) {
 export default app;
 
 //test
-import tests from "../test/tests.js";
+import tests from "../test/mainTests.js";
+import db from "./config/database.js";
 
 tests();

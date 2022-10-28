@@ -1,7 +1,7 @@
 import riotAPI from "./riotTests.js";
 
 async function runTests() {
-	riotAPI();
+	// riotAPI();
 }
 
 export default runTests;
