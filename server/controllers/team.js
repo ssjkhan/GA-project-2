@@ -20,26 +20,24 @@ async function addPlayer(req, res, next) {
 			team: null,
 		});
 
-		await playerDoc.save();
 		var allPlayers = await Player.find({}).exec();
-		console.log(allPlayers);
 
 		var teamDoc = await Team.find({ teamName: teamName }).exec();
+
 		if (teamDoc.length === 0) {
 			teamDoc = new Team({ teamName: teamName });
-			teamDoc.save();
 		}
 
 		playerDoc.team = teamDoc._id;
-
 		teamDoc.players.push(playerDoc._id);
+
+		await playerDoc.save();
+		await teamDoc.save();
 	} catch (error) {
 		console.log(error);
 	}
 	res.redirect("/team");
 }
-
-async function addTeam(req, res, next) {}
 
 async function deletePlayer(req, res, next) {
 	var name = req.query.playerName.slice(1);
