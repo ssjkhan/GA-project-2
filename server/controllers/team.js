@@ -1,14 +1,16 @@
 import * as Player from "../services/database/player.js";
 import PlayerModel from "../models/player.js";
 
-function main(req, res, next) {
-	res.render("./team/index", { title: "DraftAtlas" });
+async function main(req, res, next) {
+	const playersArr = await PlayerModel.find().lean().exec();
+
+	res.render("./team/index", { title: "DraftAtlas", players: playersArr });
 }
 
 async function addPlayer(req, res, next) {
 	console.log(req.body);
 	try {
-		const newPlayer = await Player.addPlayer(req.body);
+		await Player.addPlayer(req.body.playerName, req.body.ROLE);
 
 		await PlayerModel.create(req.body);
 	} catch (error) {
@@ -27,4 +29,4 @@ async function deletePlayer(req, res, next) {
 	res.redirect("/team");
 }
 
-export { main as default, main, addPlayer };
+export { main as default, main, addPlayer, deletePlayer };

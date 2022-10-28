@@ -18,7 +18,15 @@
 							<th>Player Actions</th>
 						</tr>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+						<% players.forEach(player => { %>
+						<tr>
+							<td><%= player.playerName %></td>
+							<td><%= player.ROLE %></td>
+							<td><a herf="/team/delete/<%=player.playerName%>"><button>Delete Player</button></td>
+						</tr>
+						<% }) %>
+					</tbody>
 				</table>
 			</div>
 			<div class="addPlayer">

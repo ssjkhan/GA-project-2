@@ -7,7 +7,7 @@
 }
 body {
 	display: grid;
-	grid-template-rows: 95vh 5vh;
+	grid-template-rows: 95fr 5fr;
 	grid-template-areas:
 		"content"
 		"return";
@@ -19,8 +19,10 @@ body {
 .content {
 	grid-area: "content";
 	display: grid;
-	grid-template-rows: 10vh 1fr;
-	grid-template-areas: "playerDisplay" "newPlayer";
+	grid-template-rows: 90vh 10vh;
+	grid-template-areas:
+		"playerDisplay"
+		"newPlayer";
 	align-content: center;
 	justify-content: center;
 }
@@ -48,7 +50,8 @@ td {
 	box-sizing: border-box;
 	outline: dotted 0.1rem var(--light2);
 	padding: 0.25rem 1rem 0.25rem 1rem;
-	overflow: hidden;
+	width: 20rem;
+	height: auto;
 }
 
 input {
