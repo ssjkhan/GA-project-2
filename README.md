@@ -2,12 +2,16 @@
 
 Project-2 for SEI-55-TOR
 
+[<img alt="Demo Opening Page" width="40px" src="imgs/screenshot-1.PNG" />]
+
 # CURRENT STATUS
 
 - cloud server based web application for team sign up
 - robust framework for easy sign up and removal of players from the league
 - role assignment and interactive modern UI
 - Try it out for free, [here](https://draft-atlas-prototype.herokuapp.com/)!
+
+[<img alt="Demo Opening Page" width="40px" src="imgs/screenshot-2.PNG" />]
 
 # TECH
 
