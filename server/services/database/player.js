@@ -10,6 +10,8 @@ async function addPlayer(playerName, role) {
 }
 
 // remove a player doc from the database
-async function deletePlayer() {}
+async function deletePlayer(req, res, next) {
+	console.log(req.body);
+}
 
 export { deletePlayer, addPlayer };

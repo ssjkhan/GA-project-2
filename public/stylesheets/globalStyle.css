@@ -27,6 +27,7 @@
 	position: relative;
 	transition: box-shadow 0.15s, transform 0.15s;
 }
+input[type="submit"],
 button,
 a > button {
 	background-color: var(--light3);
@@ -41,11 +42,12 @@ a > button {
 	position: relative;
 	transition: box-shadow 0.15s, transform 0.15s;
 }
-
+input[type="submit"]:hover,
 button:hover,
 a > button:hover {
 	transform: translateY(-0.1rem);
 }
+input[type="submit"]:active,
 button:active,
 a > button:active {
 	transform: translateY(0.1rem);

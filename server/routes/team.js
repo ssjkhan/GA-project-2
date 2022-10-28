@@ -6,7 +6,8 @@ const router = express.Router();
 
 // mount routes
 router.get("/", Controller.main);
+router.get("/delete", Controller.deletePlayer);
 router.post("/add", Controller.addPlayer);
-router.delete("/delete", Controller.deletePlayer);
+router.delete("/", Controller.deletePlayer);
 
 export { router as default };

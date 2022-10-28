@@ -54,6 +54,11 @@ td {
 	height: auto;
 }
 
+td.buttons {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
 input {
 	width: auto;
 	height: auto;

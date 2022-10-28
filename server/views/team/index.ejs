@@ -23,7 +23,22 @@
 						<tr>
 							<td><%= player.playerName %></td>
 							<td><%= player.ROLE %></td>
-							<td><a herf="/team/delete/<%=player.playerName%>"><button>Delete Player</button></td>
+							<td class="buttons">
+								<form
+									action="/team/delete"
+									method="delete"
+								>
+									<input
+										type="hidden"
+										name="playerName"
+										value="/<%=player.playerName %>"
+									/>
+									<input
+										type="submit"
+										value="Delete Player"
+									/>
+								</form>
+							</td>
 						</tr>
 						<% }) %>
 					</tbody>

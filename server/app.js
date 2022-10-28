@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import createError from "http-errors";
 import path from "path";
+import methodOverride from "method-override";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import database from "./config/database.js";
@@ -23,6 +24,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride("_method"));
 
 // import middleware for mount
 import indexRouter from "./routes/index.js";

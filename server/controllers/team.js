@@ -20,9 +20,10 @@ async function addPlayer(req, res, next) {
 }
 
 async function deletePlayer(req, res, next) {
-	console.log(req.body);
+	var name = req.query.playerName.slice(1);
 
 	try {
+		await PlayerModel.deleteOne({ playerName: name });
 	} catch (error) {
 		console.log(error);
 	}
