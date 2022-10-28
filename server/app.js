@@ -26,7 +26,7 @@ app.use(cookieParser());
 // import middleware for mount
 import indexRouter from "./routes/index.js";
 
-// Mount Routes
+// Mount Main Routes
 app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
@@ -46,9 +46,3 @@ app.use(function (err, req, res, next) {
 });
 
 export default app;
-
-//test
-import tests from "../test/mainTests.js";
-import db from "./config/database.js";
-
-tests();

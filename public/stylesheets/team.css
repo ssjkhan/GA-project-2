@@ -18,22 +18,42 @@ body {
 
 .content {
 	grid-area: "content";
-	display: flex;
+	display: grid;
+	grid-template-rows: 10vh 1fr;
+	grid-template-areas: "playerDisplay" "newPlayer";
 	align-content: center;
 	justify-content: center;
 }
 
+.newPlayer {
+	grid-area: "newPlayer";
+}
+
+.playerDisplay {
+	grid-area: "playerDisplay";
+}
+
+table {
+	max-width: 60vw;
+}
 tr {
 	display: flex;
 	align-items: baseline;
 	width: max-content;
 }
+
 th,
 td {
 	display: flex;
 	box-sizing: border-box;
 	outline: dotted 0.1rem var(--light2);
 	padding: 0.25rem 1rem 0.25rem 1rem;
+	overflow: hidden;
+}
+
+input {
+	width: auto;
+	height: auto;
 }
 
 #return,

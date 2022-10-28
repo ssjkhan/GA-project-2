@@ -8,7 +8,6 @@ const router = express.Router();
 router.get("/", Controller.main);
 
 // other requests
-router.use("/test", Controller.test);
 router.use("/team", Controller.team);
 
 export { router as default };

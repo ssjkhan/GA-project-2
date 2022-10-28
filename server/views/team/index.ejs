@@ -9,12 +9,40 @@
 	</head>
 	<body>
 		<div class="content">
-			<table>
-				<tr>
-					<th>Player Name</th>
-					<th>Player Role</th>
-				</tr>
-			</table>
+			<div class="playerDisplay">
+				<table>
+					<thead>
+						<tr>
+							<th>Player Name</th>
+							<th>Player Role</th>
+							<th>Player Actions</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<div class="addPlayer">
+				<form
+					action="/team/add"
+					method="post"
+				>
+					<input
+						name="playerName"
+						type="text"
+					/>
+					<select name="ROLE">
+						<option value="TOP">TOP</option>
+						<option value="JNG">JUNGLE</option>
+						<option value="MID">MID</option>
+						<option value="BOT">BOT</option>
+						<option value="SUP">SUP</option>
+					</select>
+					<input
+						type="submit"
+						value="Add Player"
+					/>
+				</form>
+			</div>
 		</div>
 		<div id="return">
 			<a href="/">
