@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<%- include("./title") %>
+		<%- include("./partials/header") %>
 		<link
 			rel="stylesheet"
-			href="/stylesheets/style.css"
+			href="/stylesheets/index.css"
 		/>
 	</head>
 	<body>
-		<h1><%= title %></h1>
-		<p>Welcome to <%= title %></p>
-		<h2>Testing Links</h2>
+		<div class="topSpacer">TOP SPACER</div>
+		<div class="main">MAIN SPACER</div>
+		<div class="bottomSpacer">BOTTOM SPACER</div>
+		<h1>Testing Links</h1>
 		<%- include("testingLinks") %>
 	</body>
 </html>

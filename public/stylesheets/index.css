@@ -1,0 +1,21 @@
+body {
+	display: grid;
+	grid-template-areas:
+		"topSpacer"
+		"main"
+		"bottomSpacer";
+	grid-template-rows: 20vh 60vh 20vh;
+}
+
+.topSpacer {
+	grid-area: "topSpacer";
+	background-color: blue;
+}
+.main {
+	grid-area: "main";
+	background-color: beige;
+}
+.bottomSpacer {
+	grid-area: "bottomSpacer";
+	background-color: brown;
+}
