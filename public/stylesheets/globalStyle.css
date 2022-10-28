@@ -4,3 +4,34 @@
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.5rem;
 }
+
+button {
+	background-color: var(--light2);
+	border-radius: 1rem;
+	border-width: 0;
+	box-shadow: var(--dark2) 0 2px 4px, var(--dark2) 0 0.5rem 1rem 0rem,
+		var(--light2) 0 -0rem 0 inset;
+	color: var(--dark1);
+
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	position: relative;
+	transition: box-shadow 0.15s, transform 0.15s;
+}
+
+button:focus {
+	box-shadow: var(--light2) 0 0 0 1.5px inset, var(--dark2) 0 2px 4px,
+		var(--dark2) 0 7px 13px -3px, var(--light2) 0 -3px 0 inset;
+}
+
+button:hover {
+	box-shadow: var(--dark2) 0 0.2rem 8px, var(--dark2) 0 0.5rem 1rem -0.2rem,
+		var(--light2) 0 0 -2rem 0 inset;
+	transform: translateY(-0.1rem);
+}
+
+button:active {
+	box-shadow: var(--light2) 0 0.2rem 0.5rem inset;
+	transform: translateY(0.1rem);
+}

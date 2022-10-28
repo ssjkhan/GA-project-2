@@ -1,3 +1,9 @@
+:root {
+	--dark2: #2c3639;
+	--dark1: #3f4e4f;
+	--light1: #a27b5c;
+	--light2: #dcd7c9;
+}
 body {
 	display: grid;
 	grid-template-areas:
@@ -5,17 +11,35 @@ body {
 		"main"
 		"bottomSpacer";
 	grid-template-rows: 20vh 60vh 20vh;
+	grid-template-columns: 100vw;
+	background-image: -webkit-linear-gradient(30deg, var(--dark2), var(--dark1));
 }
 
 .topSpacer {
 	grid-area: "topSpacer";
-	background-color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 .main {
 	grid-area: "main";
-	background-color: beige;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+#launchPanel {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 2vh;
+	width: 80vw;
+	height: 24vh;
+}
+#launchPanel > button {
+	width: max-content;
+	height: max-content;
+	padding: 2vh;
+}
+
 .bottomSpacer {
-	grid-area: "bottomSpacer";
-	background-color: brown;
 }
