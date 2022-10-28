@@ -49,7 +49,3 @@ app.use(function (err, req, res, next) {
 });
 
 export default app;
-
-// import Tests from "../test/databaseTests.js";
-
-// Tests();

@@ -50,8 +50,9 @@ td {
 	box-sizing: border-box;
 	outline: dotted 0.1rem var(--light2);
 	padding: 0.25rem 1rem 0.25rem 1rem;
-	width: 20rem;
+	width: 15rem;
 	height: auto;
+	overflow: hidden;
 }
 
 td.buttons {

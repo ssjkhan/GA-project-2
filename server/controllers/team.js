@@ -3,7 +3,7 @@ import team from "../models/team.js";
 import Team from "../models/team.js";
 
 async function main(req, res, next) {
-	const playersArr = await Player.find().lean().exec();
+	const playersArr = await Player.find().lean().populate("team").exec();
 
 	res.render("./team/index", { title: "DraftAtlas", players: playersArr });
 }
@@ -20,12 +20,13 @@ async function addPlayer(req, res, next) {
 			team: null,
 		});
 
-		var allPlayers = await Player.find({}).exec();
-
 		var teamDoc = await Team.find({ teamName: teamName }).exec();
 
 		if (teamDoc.length === 0) {
+			console.log("teamDoc didn't match");
 			teamDoc = new Team({ teamName: teamName });
+		} else {
+			teamDoc = teamDoc[0];
 		}
 
 		playerDoc.team = teamDoc._id;
