@@ -1,20 +1,40 @@
+/* :root {
+	--dark2: #2c061f;
+	--dark1: #374045;
+	--light1: #d89216;
+	--light2: #e1d89f;
+} */
+
 :root {
-	--dark2: #2c3639;
-	--dark1: #3f4e4f;
-	--light1: #a27b5c;
-	--light2: #dcd7c9;
+	--dark2: #231942;
+	--dark1: #5e548e;
+	--light1: #9f86c0;
+	--light2: #be95c4;
+	--light3: #e0b1cb;
 }
+
 body {
 	display: grid;
 	grid-template-areas:
 		"topSpacer"
 		"main"
-		"bottomSpacer";
+		"bottomSpacer"
+		"footer";
 	grid-template-rows: 20vh 60vh 20vh;
 	grid-template-columns: 100vw;
-	background-image: -webkit-linear-gradient(30deg, var(--dark2), var(--dark1));
+	background-color: var(--dark2);
 }
 
+#footer {
+	grid-area: "footer";
+	display: flex;
+	justify-content: center;
+}
+
+#footer > a > button {
+	background-color: var(--light3);
+	color: var(--dark2);
+}
 .topSpacer {
 	grid-area: "topSpacer";
 	display: flex;
