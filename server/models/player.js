@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 const playerSchema = mongoose.Schema({
 	name: String,
-	team: String,
-	summoners: {
+	role: String,
+	team: {
 		type: mongoose.Schema.Types.ObjectId,
-		ref: "gameAccount",
+		ref: "team",
 	},
 });
 

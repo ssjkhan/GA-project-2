@@ -1,0 +1,45 @@
+:root {
+	--dark2: #231942;
+	--dark1: #5e548e;
+	--light1: #9f86c0;
+	--light2: #be95c4;
+	--light3: #e0b1cb;
+}
+body {
+	display: grid;
+	grid-template-rows: 95vh 5vh;
+	grid-template-areas:
+		"content"
+		"return";
+	grid-template-columns: 100vw;
+	background-color: var(--dark2);
+	color: var(--light3);
+}
+
+.content {
+	grid-area: "content";
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+tr {
+	display: flex;
+	align-items: baseline;
+	width: max-content;
+}
+th,
+td {
+	display: flex;
+	box-sizing: border-box;
+	outline: dotted 0.1rem var(--light2);
+	padding: 0.25rem 1rem 0.25rem 1rem;
+}
+
+#return,
+div #return {
+	grid-area: "return";
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}

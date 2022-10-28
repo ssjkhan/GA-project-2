@@ -1,7 +1,10 @@
-import * as accountServices from "../services/database/gameAccount.js";
-
 function main(req, res, next) {
-	res.send("hi my name is main");
+	res.render("./team/index", { title: "DraftAtlas" });
 }
 
-export { main as default, main };
+function getPlayer(req, res, next) {
+	var nextRoute = "/player/:" + req.params.playerID;
+	res.redirect(nextRoute);
+}
+
+export { main as default, main, getPlayer as players };

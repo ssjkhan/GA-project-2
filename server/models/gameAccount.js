@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const accountSchema = mongoose.Schema({
-	inGameName: String,
-	accountID: String,
-	PUUID: String,
+	name: String,
+	role: String,
 });
 
 export default mongoose.model("gameAccount", accountSchema);

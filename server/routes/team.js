@@ -6,5 +6,6 @@ const router = express.Router();
 
 // mount routes
 router.get("/", Controller.main);
+router.get("/:playerID", Controller.players);
 
 export { router as default };
